@@ -24,11 +24,11 @@ class FileStorage:
         """Adds new object to storage dictionary"""
         self.all().update({obj.to_dict()['__class__'] + '.' + obj.id: obj})
 
-    def delete(self, obj=None):
-        """ deletes an object from storage dictionary """
+    def delete(self, obj=none):
+        """function that deletes an object from storage dictionary"""
         if (obj):
             key = "{}.{}".format(obj.__class__.__name__, obj.id)
-            del FileStorage.__objects[key]
+            del Filestorage._objects[key]
             self.save()
 
     def save(self):
